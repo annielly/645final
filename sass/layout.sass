@@ -1,0 +1,87 @@
+@mixin hStyle($hClr,$hfW,$hfS)
+	color: $hClr
+	font-weight: $hfW
+	font-size: $hfS
+
+header
+	width: inherit
+	clear: both
+	text-align: center
+	padding-top: 40px
+	img
+		max-width: 100%
+		height: auto
+	h1
+		@include hStyle(#E65C43,100,4em)
+		line-height: 0
+
+	h2
+		@include hStyle(#FFF,900,2.5em)
+		line-height: 0
+		margin-bottom: 70px
+	h3
+		@include hStyle(#666,400,2em)
+		line-height: 0
+		margin-bottom: 50px
+#headline
+	width: 100%
+	height: 130px
+	#{$bg}: #F25C43
+	text-align: center
+	margin: 0 auto
+	h1
+		@include hStyle(#FFF,100,2.5em)
+		padding-top: 50px
+#content
+	width: 940px
+	margin: 20px auto
+	h3
+		@include hStyle(#666,400,2em)
+	#products
+        float: left
+		width: 460px
+		img
+			float: left
+			margin-right: 20px
+		article
+			margin-bottom: 40px
+		h4
+			line-height: 1em
+	#testimonials
+        float: right
+		width: 460px
+
+.greybar
+	width: 100%
+	height: 90px
+	clear: both
+	padding-top: 30px
+	#{$bg}: #F5F6F6
+
+footer
+	width: 100%
+	height: 120px
+	text-align: center
+	color: #FFF
+	padding-top: 50px
+    #{$bg}: #30353D
+
+.social-media
+	margin: 0 auto
+	width: 165px
+	div
+		margin-right: 5px
+        float: left
+	div.one
+		#{$bg}: $socialMedia 0 0
+	div.two
+		#{$bg}: $socialMedia -38px 0
+	div.three
+		#{$bg}: $socialMedia -76px 0
+	div.four
+		#{$bg}: $socialMedia -114px 0
+	a
+		display: block
+		width: 36px
+		height: 36px
+		text-indent: -99999px
